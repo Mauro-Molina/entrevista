@@ -42,7 +42,7 @@ selectElement.addEventListener('change', (event) => {
 
             if (event.target.value === 'cat1' ){
                 mercedes.classList.toggle('class')
-                cat2.classList.REMOVE('class')
+                cat2.classList.remove('class')
             }
 
         });
@@ -62,7 +62,7 @@ selectElement.addEventListener('change', (event) => {
 
             if (event.target.value === 'cat1' ){
                 vw.classList.toggle('class')
-                cat2.classList.REMOVE('class')
+                cat2.classList.remove('class')
             }
 
         });
