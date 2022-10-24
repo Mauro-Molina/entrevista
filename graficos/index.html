@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            canvas{
+                width:1300px!important;
+                height: 700px!important;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <h2>User Name</h2>
+        </nav>
+        <div class="container"> 
+
+            <select class="categoria">
+                <option value="cat1">Categoria A</option>
+                <option value="cat2">Categoria B</option>
+            </select>
+            
+                <select class="marca">
+                    <option value="">Seleccione Uno …</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Mercedes">Mercedes</option>
+                    <option value="VW">VW</option>
+                </select>
+        </div>
+        <h4>Ventas por: </h4>
+        <canvas id="myChart" class="Audi" width="50px" height="50px"></canvas>
+        <canvas id="myChart1" class="Mercedes" width="50px" height="50px"></canvas>
+        <canvas id="myChart2" class="VW" width="50px" height="50px"></canvas>
+
+        <canvas id="myChart3" class="cat2" width="50px" height="50px"></canvas>
+        
+    </body>
+    <script>
+        var ctx= document.getElementById("myChart").getContext("2d");
+        var ctx1= document.getElementById("myChart1").getContext("2d");
+        var ctx2= document.getElementById("myChart2").getContext("2d");
+        var ctx3= document.getElementById("myChart3").getContext("2d");
+        var myChart= new Chart(ctx,{
+            type:"bar",
+            data:{
+                labels:['col1','col2','col3'],
+                datasets:[{
+                        label:'Num datos',
+                        data:[10,9,15],
+                        backgroundColor:[
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(229, 89, 50,0.5)'
+                        ]
+                }]
+            },
+            options:{
+                scales:{
+                    yAxes:[{
+                            ticks:{
+                                beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        });
+
+        var myChart1= new Chart(ctx1,{
+            type:"bar",
+            data:{
+                labels:['col1','col2','col3'],
+                datasets:[{
+                        label:'Num datos',
+                        data:[5,12,2],
+                        backgroundColor:[
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(229, 89, 50,0.5)'
+                        ]
+                }]
+            },
+            options:{
+                scales:{
+                    yAxes:[{
+                            ticks:{
+                                beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        });
+
+        var myChart2= new Chart(ctx2,{
+            type:"bar",
+            data:{
+                labels:['col1','col2','col3'],
+                datasets:[{
+                        label:'Num datos',
+                        data:[3,7,12],
+                        backgroundColor:[
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(229, 89, 50,0.5)'
+                        ]
+                }]
+            },
+            options:{
+                scales:{
+                    yAxes:[{
+                            ticks:{
+                                beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        });
+    
+        var myChart3= new Chart(ctx3,{
+            type:"bar",
+            data:{
+                labels:['col1','col2','col3'],
+                datasets:[{
+                        label:'Num datos',
+                        data:[5,12,2],
+                        backgroundColor:[
+                            'rgb(66, 134, 244,0.5)',
+                            'rgb(74, 135, 72,0.5)',
+                            'rgb(229, 89, 50,0.5)'
+                        ]
+                }]
+            },
+            options:{
+                scales:{
+                    yAxes:[{
+                            ticks:{
+                                beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        }); 
+    </script>
+
+    <script src="main.js"></script>
+</html>
